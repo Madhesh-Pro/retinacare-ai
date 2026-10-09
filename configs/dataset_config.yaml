@@ -1,0 +1,23 @@
+# RetinaCare-AI Dataset Configuration
+
+dataset:
+  name: "APTOS 2019 Blindness Detection"
+  raw_csv_path: "data/raw/train.csv"
+  raw_images_dir: "data/raw/train_images"
+  processed_dir: "data/processed"
+  results_dir: "results"
+
+classes:
+  0: "No Diabetic Retinopathy"
+  1: "Mild Diabetic Retinopathy"
+  2: "Moderate Diabetic Retinopathy"
+  3: "Severe Diabetic Retinopathy"
+  4: "Proliferative Diabetic Retinopathy"
+
+referable_classes: [2, 3, 4]
+
+inspection:
+  supported_extensions: [".png", ".jpg", ".jpeg", ".PNG", ".JPG", ".JPEG"]
+  num_workers: 4
+  compute_md5_duplicates: true
+  report_filename: "results/dataset_inspection_report.json"
